@@ -8,6 +8,7 @@ class Test{
     print()
     {
         console.log(`S=${Test.s} X=${this.x}`);
+        console.log("Printed");
     }
     
 }
