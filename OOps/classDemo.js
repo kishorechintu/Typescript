@@ -1,15 +1,18 @@
-var Database = /** @class */ (function () {
-    function Database(dbName) {
-        console.log("Connection Created Database Name is..." + dbName);
+var Test = /** @class */ (function () {
+    function Test(y) {
+        this.x = 0;
+        Test.s = Test.s + y;
+        this.x = this.x + y;
     }
-    Database.prototype.insert = function () {
-        console.log("Record Inserted");
+    Test.prototype.print = function () {
+        console.log("S=" + Test.s + " X=" + this.x);
     };
-    Database.prototype["delete"] = function () {
-        console.log("Record Deleted");
-    };
-    return Database;
+    Test.s = 0;
+    return Test;
 }());
-var obj = new Database("MongoDB");
-obj.insert();
-obj["delete"]();
+var TestObj = new Test(5);
+TestObj.print();
+var obj2 = new Test(6);
+obj2.print();
+var obj3 = new Test(5);
+obj3.print();
